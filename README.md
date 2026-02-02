@@ -8,6 +8,26 @@ Hoskbrew is a white-label physical game manufacturing service helping indie deve
 
 ---
 
+## 📸 Visual Showcase
+
+### Desktop View
+
+|                 Hero Section                 |                       Services                       |
+| :------------------------------------------: | :--------------------------------------------------: |
+| ![Hero](public/screenshots/hero-desktop.png) | ![Services](public/screenshots/services-desktop.png) |
+
+|                       Platforms                        |                   Quote Form                   |
+| :----------------------------------------------------: | :--------------------------------------------: |
+| ![Platforms](public/screenshots/platforms-desktop.png) | ![Quote](public/screenshots/quote-desktop.png) |
+
+### Mobile Responsive
+
+<div align="center">
+  <img src="public/screenshots/hero-mobile.png" width="300" alt="Mobile View" />
+</div>
+
+---
+
 ## 🚀 Features
 
 - **Professional Branding:** Custom Cthulhu-themed visual identity with "Bangers" and "Inter" typography.
