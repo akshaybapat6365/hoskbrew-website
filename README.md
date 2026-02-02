@@ -12,24 +12,24 @@ Hoskbrew is a white-label physical game manufacturing service helping indie deve
 
 ### Desktop View (Light Theme)
 
-|                 Hero Section                 |                       Services                       |
-| :------------------------------------------: | :--------------------------------------------------: |
-| ![Hero](public/screenshots/hero-desktop.png) | ![Services](public/screenshots/services-desktop.png) |
+|                                                     Hero Section                                                     |                                                           Services                                                           |
+| :------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
+| ![Hero](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/main/public/screenshots/hero-desktop.png) | ![Services](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/main/public/screenshots/services-desktop.png) |
 
-|                       Platforms                        |                   Quote Form                   |
-| :----------------------------------------------------: | :--------------------------------------------: |
-| ![Platforms](public/screenshots/platforms-desktop.png) | ![Quote](public/screenshots/quote-desktop.png) |
+|                                                           Platforms                                                            |                                                       Quote Form                                                       |
+| :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
+| ![Platforms](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/main/public/screenshots/platforms-desktop.png) | ![Quote](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/main/public/screenshots/quote-desktop.png) |
 
 ### Desktop View (Dark Theme)
 
-|                   Hero Dark                    |                     Services Dark                      |                    Quote Dark                    |
-| :--------------------------------------------: | :----------------------------------------------------: | :----------------------------------------------: |
-| ![Hero Dark](public/screenshots/hero-dark.png) | ![Services Dark](public/screenshots/services-dark.png) | ![Quote Dark](public/screenshots/quote-dark.png) |
+|                                                       Hero Dark                                                        |                                                         Services Dark                                                          |                                                        Quote Dark                                                        |
+| :--------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
+| ![Hero Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/main/public/screenshots/hero-dark.png) | ![Services Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/main/public/screenshots/services-dark.png) | ![Quote Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/main/public/screenshots/quote-dark.png) |
 
 ### Mobile Responsive
 
 <div align="center">
-  <img src="public/screenshots/hero-mobile.png" width="300" alt="Mobile View" />
+  <img src="https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/main/public/screenshots/hero-mobile.png" width="300" alt="Mobile View" />
 </div>
 
 ---
