@@ -33,7 +33,16 @@ Hoskbrew is a white-label physical game manufacturing service helping indie deve
 ### Mobile Responsive
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/hero-mobile.png" width="300" alt="Mobile View" />
+  <table>
+    <tr>
+      <td align="center"><strong>Light Theme</strong></td>
+      <td align="center"><strong>Dark Theme</strong></td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/hero-mobile-light.png" width="280" alt="Mobile Light Theme" /></td>
+      <td><img src="https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/hero-mobile-dark.png" width="280" alt="Mobile Dark Theme" /></td>
+    </tr>
+  </table>
 </div>
 
 ---
