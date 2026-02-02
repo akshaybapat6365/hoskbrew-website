@@ -2,9 +2,11 @@
 
 ![Hoskbrew Banner](public/logo.png)
 
+### 🌐 [**Visit Live Website**](https://hoskbrew.vercel.app)
+
 Hoskbrew is a white-label physical game manufacturing service helping indie developers turn their digital games into real cartridges for NES, SNES, Game Boy, and Genesis.
 
-**🌐 Live Website:** [https://hoskbrew.vercel.app](https://hoskbrew.vercel.app)
+---
 
 ## 🚀 Features
 
@@ -29,7 +31,7 @@ Hoskbrew is a white-label physical game manufacturing service helping indie deve
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/hoskbrew-website.git
+   git clone https://github.com/akshaybapat6365/hoskbrew-website.git
    cd hoskbrew-website
    ```
 
