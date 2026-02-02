@@ -12,19 +12,23 @@ Hoskbrew is a white-label physical game manufacturing service helping indie deve
 
 ### Desktop View (Light Theme)
 
-|                                                     Hero Section                                                     |                                                           Services                                                           |
-| :------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
+|                                                      Hero Section                                                      |                                                            Services                                                            |
+| :--------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
 | ![Hero](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/hero-desktop.png) | ![Services](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/services-desktop.png) |
 
-|                                                           Platforms                                                            |                                                       Quote Form                                                       |
-| :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
+|                                                            Platforms                                                             |                                                        Quote Form                                                        |
+| :------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
 | ![Platforms](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/platforms-desktop.png) | ![Quote](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/quote-desktop.png) |
 
 ### Desktop View (Dark Theme)
 
-|                                                       Hero Dark                                                        |                                                         Services Dark                                                          |                                                        Quote Dark                                                        |
-| :--------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
-| ![Hero Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/hero-dark.png) | ![Services Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/services-dark.png) | ![Quote Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/quote-dark.png) |
+|                                                        Hero Dark                                                         |                                                          Services Dark                                                           |
+| :----------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------: |
+| ![Hero Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/hero-dark.png) | ![Services Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/services-dark.png) |
+
+|                                                           Platforms Dark                                                           |                                                         Quote Dark                                                         |
+| :--------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
+| ![Platforms Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/platforms-dark.png) | ![Quote Dark](https://raw.githubusercontent.com/akshaybapat6365/hoskbrew-website/master/public/screenshots/quote-dark.png) |
 
 ### Mobile Responsive
 
