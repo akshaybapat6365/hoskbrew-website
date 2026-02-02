@@ -10,7 +10,7 @@ Hoskbrew is a white-label physical game manufacturing service helping indie deve
 
 ## 📸 Visual Showcase
 
-### Desktop View
+### Desktop View (Light Theme)
 
 |                 Hero Section                 |                       Services                       |
 | :------------------------------------------: | :--------------------------------------------------: |
@@ -19,6 +19,12 @@ Hoskbrew is a white-label physical game manufacturing service helping indie deve
 |                       Platforms                        |                   Quote Form                   |
 | :----------------------------------------------------: | :--------------------------------------------: |
 | ![Platforms](public/screenshots/platforms-desktop.png) | ![Quote](public/screenshots/quote-desktop.png) |
+
+### Desktop View (Dark Theme)
+
+|                   Hero Dark                    |                     Services Dark                      |                    Quote Dark                    |
+| :--------------------------------------------: | :----------------------------------------------------: | :----------------------------------------------: |
+| ![Hero Dark](public/screenshots/hero-dark.png) | ![Services Dark](public/screenshots/services-dark.png) | ![Quote Dark](public/screenshots/quote-dark.png) |
 
 ### Mobile Responsive
 
@@ -32,6 +38,7 @@ Hoskbrew is a white-label physical game manufacturing service helping indie deve
 
 - **Professional Branding:** Custom Cthulhu-themed visual identity with "Bangers" and "Inter" typography.
 - **Responsive Design:** Fully mobile-optimized layout built with Tailwind CSS.
+- **Dark Mode Support:** Full dark theme with toggle functionality.
 - **Interactive UI:** Smooth Framer Motion animations for cards, buttons, and page transitions.
 - **Quote Calculator:** Multi-step form for estimating manufacturing costs.
 - **Platform Showcase:** Detailed specs for supported consoles (NES, SNES, GB, GBA, Genesis).
@@ -74,11 +81,20 @@ Hoskbrew is a white-label physical game manufacturing service helping indie deve
 
 ## 🎨 Design System
 
+### Light Theme
+
 - **Primary Green:** `#4CA64C`
 - **Accent Yellow:** `#FDEE30`
 - **Action Red:** `#ED1C24`
 - **Sky Blue:** `#89C4F4`
 - **Dark Text:** `#1A1A1A`
+
+### Dark Theme
+
+- **Background:** `#0F1419`
+- **Card Background:** `#1A1F2E`
+- **Primary:** `#22C55E`
+- **Text:** `#F8FAFC`
 
 ## 📄 License
 
