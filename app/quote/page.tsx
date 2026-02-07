@@ -161,7 +161,7 @@ export default function QuotePage() {
           </div>
 
           <div className="mb-8">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between overflow-x-auto">
               {steps.map((step, index) => (
                 <div
                   key={step.id}

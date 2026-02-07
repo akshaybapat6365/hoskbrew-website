@@ -131,7 +131,7 @@ export default function HoskBrewAdPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 text-white"
+                  className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 text-white"
                 >
                   Homebrews for{" "}
                   <span className="text-brand-primary">Real Hardware</span>
@@ -141,7 +141,7 @@ export default function HoskBrewAdPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-lg md:text-xl text-slate-300 mb-4 max-w-lg leading-relaxed"
+                  className="text-base sm:text-lg md:text-xl text-slate-300 mb-4 max-w-lg leading-relaxed"
                 >
                   A magical blend of passion and production, delivered with care
                   and built for play. We craft, print, and forge what&apos;s
@@ -212,7 +212,7 @@ export default function HoskBrewAdPage() {
                       alt="HoskBrew - Professional Retro Game Manufacturing"
                       width={600}
                       height={800}
-                      className="w-full max-w-lg object-contain"
+                      className="w-full max-w-[300px] sm:max-w-lg object-contain"
                       priority
                     />
                   </div>

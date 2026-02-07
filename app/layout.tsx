@@ -10,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hoskbrew.vercel.app"),
   title: "Hoskbrew | Physical Game Manufacturing for Indie Developers",
   description:
     "Professional white-label game cartridge manufacturing. NES, SNES, Game Boy, Genesis & more. Low minimum orders starting at 100 units.",

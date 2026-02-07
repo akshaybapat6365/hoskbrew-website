@@ -119,7 +119,7 @@ export default function CrystalMinesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 text-white"
+                  className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 text-white"
                 >
                   Crystal{" "}
                   <span className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-300 bg-clip-text text-transparent">
@@ -131,7 +131,7 @@ export default function CrystalMinesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-lg md:text-xl text-slate-300 mb-8 max-w-lg leading-relaxed"
+                  className="text-base sm:text-lg md:text-xl text-slate-300 mb-8 max-w-lg leading-relaxed"
                 >
                   Dig deep into underground caverns, mine rare crystals, and
                   navigate treacherous tunnels in this authentic Game Boy
@@ -192,7 +192,7 @@ export default function CrystalMinesPage() {
                       alt="Crystal Mines - Game Boy Homebrew Game"
                       width={600}
                       height={800}
-                      className="w-full max-w-md object-contain"
+                      className="w-full max-w-[280px] sm:max-w-md object-contain"
                       priority
                     />
                   </div>

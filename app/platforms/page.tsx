@@ -14,7 +14,14 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { CheckCircle, Cpu, Battery, Save, ArrowRight, Sparkles } from "lucide-react";
+import {
+  CheckCircle,
+  Cpu,
+  Battery,
+  Save,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
 
 const platforms = [
   {
@@ -184,16 +191,20 @@ export default function PlatformsPage() {
                 <Sparkles className="h-4 w-4" />
                 <span>Multi-Platform Support</span>
               </div>
-              
+
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
                 Your Game,{" "}
                 <span className="text-brand-primary">Any Platform</span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                We manufacture cartridges for all major retro gaming systems. 
-                Each platform meticulously supported with accurate hardware implementation.
-                <span className="text-brand-primary font-semibold"> Do not see yours? We love a challenge.</span>
+                We manufacture cartridges for all major retro gaming systems.
+                Each platform meticulously supported with accurate hardware
+                implementation.
+                <span className="text-brand-primary font-semibold">
+                  {" "}
+                  Do not see yours? We love a challenge.
+                </span>
               </p>
             </motion.div>
           </div>
@@ -212,66 +223,84 @@ export default function PlatformsPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {platforms.map((platform) => (
               <motion.div key={platform.name} variants={itemVariants}>
                 <Card className="h-full overflow-hidden group hover:shadow-lg transition-all duration-300">
                   <div className={`h-1 bg-gradient-to-r ${platform.accent}`} />
-                  
+
                   <CardHeader>
                     <div className="flex items-start justify-between">
                       <div className="flex items-center gap-3">
-                        <div className={`w-14 h-14 ${platform.color} rounded-xl opacity-20 group-hover:opacity-30 transition-opacity`} />
+                        <div
+                          className={`w-14 h-14 ${platform.color} rounded-xl opacity-20 group-hover:opacity-30 transition-opacity`}
+                        />
                         <div>
                           <div className="flex items-center gap-2">
-                            <CardTitle className="text-2xl">{platform.name}</CardTitle>
-                            <span className="text-xs text-muted-foreground font-mono">({platform.year})</span>
+                            <CardTitle className="text-2xl">
+                              {platform.name}
+                            </CardTitle>
+                            <span className="text-xs text-muted-foreground font-mono">
+                              ({platform.year})
+                            </span>
                           </div>
                           <CardDescription>{platform.fullName}</CardDescription>
                         </div>
                       </div>
-                      <Badge variant="outline" className="shrink-0">MOQ: {platform.moq}</Badge>
+                      <Badge variant="outline" className="shrink-0">
+                        MOQ: {platform.moq}
+                      </Badge>
                     </div>
                   </CardHeader>
-                  
+
                   <CardContent className="space-y-4">
-                    <div className="grid grid-cols-2 gap-3 text-sm">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                       <div className="bg-secondary/50 rounded-lg p-2">
                         <div className="flex items-center gap-1 text-muted-foreground mb-1">
                           <Cpu className="h-3 w-3" />
                           <span className="text-xs">CPU</span>
                         </div>
-                        <span className="font-medium text-sm">{platform.specs.cpu}</span>
+                        <span className="font-medium text-sm">
+                          {platform.specs.cpu}
+                        </span>
                       </div>
-                      
+
                       <div className="bg-secondary/50 rounded-lg p-2">
                         <div className="flex items-center gap-1 text-muted-foreground mb-1">
                           <Battery className="h-3 w-3" />
                           <span className="text-xs">Memory</span>
                         </div>
-                        <span className="font-medium text-sm">{platform.specs.memory}</span>
+                        <span className="font-medium text-sm">
+                          {platform.specs.memory}
+                        </span>
                       </div>
-                      
+
                       <div className="bg-secondary/50 rounded-lg p-2">
                         <div className="flex items-center gap-1 text-muted-foreground mb-1">
                           <Save className="h-3 w-3" />
                           <span className="text-xs">Save Type</span>
                         </div>
-                        <span className="font-medium text-sm">{platform.specs.saveType}</span>
+                        <span className="font-medium text-sm">
+                          {platform.specs.saveType}
+                        </span>
                       </div>
-                      
+
                       <div className="bg-secondary/50 rounded-lg p-2">
                         <div className="flex items-center gap-1 text-muted-foreground mb-1">
                           <CheckCircle className="h-3 w-3" />
                           <span className="text-xs">Lead Time</span>
                         </div>
-                        <span className="font-medium text-sm">{platform.leadTime}</span>
+                        <span className="font-medium text-sm">
+                          {platform.leadTime}
+                        </span>
                       </div>
                     </div>
 
                     <div className="pt-4 border-t">
-                      <h4 className="text-sm font-semibold mb-2">Key Features</h4>
+                      <h4 className="text-sm font-semibold mb-2">
+                        Key Features
+                      </h4>
                       <ul className="space-y-1">
                         {platform.features.map((feature) => (
                           <li
@@ -304,12 +333,12 @@ export default function PlatformsPage() {
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Do not See Your Platform?
               </h2>
-              
+
               <p className="text-lg text-muted-foreground mb-8">
-                We can support additional systems and custom formats. Contact us to discuss 
-                your specific requirements—we love a challenge!
+                We can support additional systems and custom formats. Contact us
+                to discuss your specific requirements—we love a challenge!
               </p>
-              
+
               <Link href="/quote">
                 <Button
                   size="lg"

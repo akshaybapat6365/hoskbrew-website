@@ -63,7 +63,7 @@ export default function PortfolioPage() {
                 <span>Quality Craftsmanship</span>
               </div>
 
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
                 Our <span className="text-brand-primary">Productions</span>
               </h1>
 
