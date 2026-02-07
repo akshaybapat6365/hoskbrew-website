@@ -3,36 +3,14 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { Section, SectionHeader } from "@/components/section";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import {
-  Gamepad2,
-  Package,
-  FileText,
-  Tag,
-  CheckCircle,
-  Truck,
-  Shield,
-  Zap,
-  Palette,
-  Camera,
-  ArrowRight,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-const mainServices = [
+const services = [
   {
-    icon: Gamepad2,
     title: "Cartridge Production",
+    price: "From $8/unit",
     headline: "Homebrews for real hardware",
     description:
       "Complete PCB design and manufacturing for all major retro platforms. We use high-quality components that meet or exceed original specifications.",
@@ -43,12 +21,10 @@ const mainServices = [
       "MMC/banked memory support",
       "100% tested on original hardware",
     ],
-    price: "From $8/unit",
-    color: "from-brand-primary/20 to-brand-primary/5",
   },
   {
-    icon: Package,
     title: "Packaging & Boxes",
+    price: "From $3/unit",
     headline: "Dream project with no vessel?",
     description:
       "Premium retail packaging that protects your game and showcases it beautifully. We craft, print, and forge what is missing, then make it yours.",
@@ -59,12 +35,10 @@ const mainServices = [
       "Custom die-cut designs",
       "Spot UV and foil options",
     ],
-    price: "From $3/unit",
-    color: "from-brand-accent/20 to-brand-accent/5",
   },
   {
-    icon: FileText,
     title: "Manuals & Inserts",
+    price: "From $1/unit",
     headline: "Complete the experience",
     description:
       "Professional instruction manuals and promotional materials printed on high-quality paper stock. The finishing touch your game deserves.",
@@ -75,12 +49,10 @@ const mainServices = [
       "Multi-language support",
       "Custom sizes available",
     ],
-    price: "From $1/unit",
-    color: "from-purple-500/20 to-purple-500/5",
   },
   {
-    icon: Tag,
     title: "Label Printing",
+    price: "From $0.50/unit",
     headline: "Premium presentation",
     description:
       "High-quality cartridge labels with vibrant colors and durable finishes that stand the test of time. Weatherproof and fade-resistant.",
@@ -91,12 +63,10 @@ const mainServices = [
       "Precise die-cutting",
       "Full color CMYK",
     ],
-    price: "From $0.50/unit",
-    color: "from-orange-500/20 to-orange-500/5",
   },
   {
-    icon: CheckCircle,
     title: "QA & Testing",
+    price: "Included",
     headline: "Built to last",
     description:
       "Rigorous quality assurance ensures every unit works perfectly before it reaches your customers. Premium quality, guaranteed.",
@@ -107,12 +77,10 @@ const mainServices = [
       "Packaging integrity check",
       "Compatibility verification",
     ],
-    price: "Included",
-    color: "from-green-500/20 to-green-500/5",
   },
   {
-    icon: Truck,
     title: "Fulfillment",
+    price: "Varies by destination",
     headline: "Delivered with care",
     description:
       "Flexible shipping options whether you want bulk delivery or direct-to-customer fulfillment. Worldwide delivery with tracking.",
@@ -123,69 +91,15 @@ const mainServices = [
       "Customs documentation",
       "Drop-shipping available",
     ],
-    price: "Varies by destination",
-    color: "from-blue-500/20 to-blue-500/5",
   },
 ];
-
-const additionalServices = [
-  {
-    icon: Palette,
-    title: "Design Services",
-    description:
-      "Need help with artwork? Our design team can create labels, manuals, and packaging that captures your game's spirit.",
-  },
-  {
-    icon: Camera,
-    title: "Product Photography",
-    description:
-      "Professional product photos for your store or marketing materials.",
-  },
-  {
-    icon: Shield,
-    title: "Warranty Program",
-    description: "Extended warranty options for your customers' peace of mind.",
-  },
-  {
-    icon: Zap,
-    title: "Rush Production",
-    description:
-      "Need it fast? Expedited production available for tight deadlines.",
-  },
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
 
 export default function ServicesPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32 bg-gradient-to-br from-brand-primary/5 via-background to-background">
-          <div className="absolute inset-0 opacity-[0.02]" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2344CF6C' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-          
+        <section className="relative overflow-hidden py-20 lg:py-28 bg-gradient-to-br from-brand-primary/5 via-background to-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -194,20 +108,35 @@ export default function ServicesPage() {
               className="text-center max-w-3xl mx-auto"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold mb-6 border border-brand-primary/20">
-                <Sparkles className="h-4 w-4" />
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
+                </svg>
                 <span>Full-Service Manufacturing</span>
               </div>
-              
+
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
                 Everything You Need to{" "}
-                <span className="text-brand-primary">Bring Your Game to Life</span>
+                <span className="text-brand-primary">
+                  Bring Your Game to Life
+                </span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                From concept to cartridge, we provide complete physical production services. 
-                A magical blend of passion and production, delivered with care and built for play.
+                From concept to cartridge, we provide complete physical
+                production services. A magical blend of passion and production,
+                delivered with care and built for play.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/quote">
                   <Button
@@ -218,114 +147,96 @@ export default function ServicesPage() {
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
-                <Link href="#services">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="font-semibold text-lg px-8 h-14"
-                  >
-                    Explore Services
-                  </Button>
-                </Link>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="font-semibold text-lg px-8 h-14"
+                >
+                  Explore Services
+                </Button>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Main Services */}
-        <Section id="services">
-          <SectionHeader
-            title="Core Services"
-            subtitle="What We Offer"
-            description="Professional white-label manufacturing for every aspect of your physical release."
-          />
+        <section className="py-20 lg:py-28">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold tracking-wide uppercase rounded-full bg-brand-primary/10 text-brand-primary border border-brand-primary/20">
+                What We Offer
+              </span>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+                Core Services
+              </h2>
+              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+                Professional white-label manufacturing for every aspect of your
+                physical release.
+              </p>
+            </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-2 gap-6 lg:gap-8"
-          >
-            {mainServices.map((service) => (
-              <motion.div key={service.title} variants={itemVariants}>
-                <Card className="h-full overflow-hidden group hover:shadow-lg transition-all duration-300">
-                  <div className={`h-1 bg-gradient-to-r ${service.color}`} />
-                  
-                  <CardHeader className="pb-4">
-                    <div className="flex items-start justify-between">
-                      <div className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center group-hover:bg-brand-primary/20 transition-colors">
-                        <service.icon className="h-6 w-6 text-brand-primary" />
-                      </div>
-                      <Badge variant="secondary" className="font-semibold">
+            <div className="max-w-4xl mx-auto space-y-12">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="flex flex-col md:flex-row md:items-start gap-6 pb-12 border-b border-border last:border-0">
+                    <div className="md:w-48 shrink-0">
+                      <div className="text-3xl font-bold text-brand-primary mb-1">
                         {service.price}
-                      </Badge>
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {service.title}
+                      </div>
                     </div>
-                    
-                    <p className="text-sm font-semibold text-brand-primary mt-4 mb-1">
-                      {service.headline}
-                    </p>
-                    
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                    
-                    <CardDescription className="mt-2">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  
-                  <CardContent className="pt-0">
-                    <ul className="space-y-2">
-                      {service.features.map((feature) => (
-                        <li
-                          key={feature}
-                          className="flex items-center gap-2 text-sm"
-                        >
-                          <CheckCircle className="h-4 w-4 text-brand-primary shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </Section>
 
-        {/* Additional Services */}
-        <Section withGrid className="bg-secondary/20">
-          <SectionHeader
-            title="Additional Services"
-            subtitle="Going Further"
-            description="Extras to make your release even more special."
-          />
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {additionalServices.map((service) => (
-              <motion.div key={service.title} variants={itemVariants}>
-                <Card className="text-center h-full hover:shadow-md transition-all duration-300">
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center mx-auto">
-                      <service.icon className="h-6 w-6 text-brand-primary" />
+                    <div className="flex-1">
+                      <h3 className="font-heading text-xl font-semibold text-brand-primary mb-2">
+                        {service.headline}
+                      </h3>
+                      <p className="text-muted-foreground mb-4">
+                        {service.description}
+                      </p>
+                      <ul className="grid sm:grid-cols-2 gap-2">
+                        {service.features.map((feature) => (
+                          <li
+                            key={feature}
+                            className="flex items-center gap-2 text-sm text-muted-foreground"
+                          >
+                            <svg
+                              className="h-4 w-4 text-brand-primary shrink-0"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 13l4 4L19 7"
+                              />
+                            </svg>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <CardTitle className="text-lg mt-4">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </Section>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* CTA Section */}
         <section className="py-20 bg-brand-primary">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -338,11 +249,11 @@ export default function ServicesPage() {
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Start Your Project?
               </h2>
-              
+
               <p className="text-lg text-white/90 mb-8">
                 Get a detailed quote within 24 hours. No commitment required.
               </p>
-              
+
               <Link href="/quote">
                 <Button
                   size="lg"
