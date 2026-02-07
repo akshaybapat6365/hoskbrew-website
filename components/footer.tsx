@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
+import { Logo } from "@/components/logo";
 
 const footerLinks = {
   services: [
@@ -32,15 +32,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <div className="relative h-16 w-48">
-                <Image
-                  src="/logo.svg"
-                  alt="Hoskbrew"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
+              <Logo variant="full" asLink={false} />
             </div>
             <p className="text-muted-foreground text-sm mb-6 max-w-sm">
               Professional white-label physical game manufacturing for indie

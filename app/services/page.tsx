@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Section, SectionHeader } from "@/components/section";
@@ -24,12 +25,15 @@ import {
   Zap,
   Palette,
   Camera,
+  ArrowRight,
+  Sparkles,
 } from "lucide-react";
 
 const mainServices = [
   {
     icon: Gamepad2,
     title: "Cartridge Production",
+    headline: "Homebrews for real hardware",
     description:
       "Complete PCB design and manufacturing for all major retro platforms. We use high-quality components that meet or exceed original specifications.",
     features: [
@@ -40,12 +44,14 @@ const mainServices = [
       "100% tested on original hardware",
     ],
     price: "From $8/unit",
+    color: "from-brand-primary/20 to-brand-primary/5",
   },
   {
     icon: Package,
     title: "Packaging & Boxes",
+    headline: "Dream project with no vessel?",
     description:
-      "Premium retail packaging that protects your game and showcases it beautifully. Various styles to match your game's aesthetic.",
+      "Premium retail packaging that protects your game and showcases it beautifully. We craft, print, and forge what is missing, then make it yours.",
     features: [
       "NES/SNES style boxes",
       "Sega clamshell cases",
@@ -54,12 +60,14 @@ const mainServices = [
       "Spot UV and foil options",
     ],
     price: "From $3/unit",
+    color: "from-brand-accent/20 to-brand-accent/5",
   },
   {
     icon: FileText,
     title: "Manuals & Inserts",
+    headline: "Complete the experience",
     description:
-      "Professional instruction manuals and promotional materials printed on high-quality paper stock.",
+      "Professional instruction manuals and promotional materials printed on high-quality paper stock. The finishing touch your game deserves.",
     features: [
       "Full-color printing",
       "Various paper weights",
@@ -68,12 +76,14 @@ const mainServices = [
       "Custom sizes available",
     ],
     price: "From $1/unit",
+    color: "from-purple-500/20 to-purple-500/5",
   },
   {
     icon: Tag,
     title: "Label Printing",
+    headline: "Premium presentation",
     description:
-      "High-quality cartridge labels with vibrant colors and durable finishes that stand the test of time.",
+      "High-quality cartridge labels with vibrant colors and durable finishes that stand the test of time. Weatherproof and fade-resistant.",
     features: [
       "Glossy or matte finish",
       "Weatherproof vinyl",
@@ -82,12 +92,14 @@ const mainServices = [
       "Full color CMYK",
     ],
     price: "From $0.50/unit",
+    color: "from-orange-500/20 to-orange-500/5",
   },
   {
     icon: CheckCircle,
     title: "QA & Testing",
+    headline: "Built to last",
     description:
-      "Rigorous quality assurance ensures every unit works perfectly before it reaches your customers.",
+      "Rigorous quality assurance ensures every unit works perfectly before it reaches your customers. Premium quality, guaranteed.",
     features: [
       "100% functional testing",
       "Save battery verification",
@@ -96,12 +108,14 @@ const mainServices = [
       "Compatibility verification",
     ],
     price: "Included",
+    color: "from-green-500/20 to-green-500/5",
   },
   {
     icon: Truck,
     title: "Fulfillment",
+    headline: "Delivered with care",
     description:
-      "Flexible shipping options whether you want bulk delivery or direct-to-customer fulfillment.",
+      "Flexible shipping options whether you want bulk delivery or direct-to-customer fulfillment. Worldwide delivery with tracking.",
     features: [
       "Worldwide shipping",
       "Tracked & insured",
@@ -110,6 +124,7 @@ const mainServices = [
       "Drop-shipping available",
     ],
     price: "Varies by destination",
+    color: "from-blue-500/20 to-blue-500/5",
   },
 ];
 
@@ -139,78 +154,207 @@ const additionalServices = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
 export default function ServicesPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <Section>
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 lg:py-32 bg-gradient-to-br from-brand-primary/5 via-background to-background">
+          <div className="absolute inset-0 opacity-[0.02]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2344CF6C' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+          
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center max-w-3xl mx-auto"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold mb-6 border border-brand-primary/20">
+                <Sparkles className="h-4 w-4" />
+                <span>Full-Service Manufacturing</span>
+              </div>
+              
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+                Everything You Need to{" "}
+                <span className="text-brand-primary">Bring Your Game to Life</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                From concept to cartridge, we provide complete physical production services. 
+                A magical blend of passion and production, delivered with care and built for play.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/quote">
+                  <Button
+                    size="lg"
+                    className="bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold text-lg px-8 h-14 group"
+                  >
+                    Get Your Free Quote
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+                <Link href="#services">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="font-semibold text-lg px-8 h-14"
+                  >
+                    Explore Services
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Main Services */}
+        <Section id="services">
           <SectionHeader
-            title="Our Services"
+            title="Core Services"
             subtitle="What We Offer"
-            description="From concept to cartridge, we provide everything you need to bring your game to life in physical form."
+            description="Professional white-label manufacturing for every aspect of your physical release."
           />
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            {mainServices.map((service, index) => (
-              <Card key={service.title} className="h-full">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <service.icon className="h-6 w-6 text-primary" />
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid md:grid-cols-2 gap-6 lg:gap-8"
+          >
+            {mainServices.map((service) => (
+              <motion.div key={service.title} variants={itemVariants}>
+                <Card className="h-full overflow-hidden group hover:shadow-lg transition-all duration-300">
+                  <div className={`h-1 bg-gradient-to-r ${service.color}`} />
+                  
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start justify-between">
+                      <div className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center group-hover:bg-brand-primary/20 transition-colors">
+                        <service.icon className="h-6 w-6 text-brand-primary" />
+                      </div>
+                      <Badge variant="secondary" className="font-semibold">
+                        {service.price}
+                      </Badge>
                     </div>
-                    <Badge variant="secondary">{service.price}</Badge>
-                  </div>
-                  <CardTitle className="mt-4">{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {service.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-center gap-2 text-sm"
-                      >
-                        <CheckCircle className="h-4 w-4 text-primary shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+                    
+                    <p className="text-sm font-semibold text-brand-primary mt-4 mb-1">
+                      {service.headline}
+                    </p>
+                    
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                    
+                    <CardDescription className="mt-2">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent className="pt-0">
+                    <ul className="space-y-2">
+                      {service.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="flex items-center gap-2 text-sm"
+                        >
+                          <CheckCircle className="h-4 w-4 text-brand-primary shrink-0" />
+                          <span className="text-muted-foreground">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </Section>
 
-        <Section withGrid className="bg-muted/30">
+        {/* Additional Services */}
+        <Section withGrid className="bg-secondary/20">
           <SectionHeader
             title="Additional Services"
-            subtitle="Extras"
-            description="Going the extra mile to make your release special."
+            subtitle="Going Further"
+            description="Extras to make your release even more special."
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
             {additionalServices.map((service) => (
-              <Card key={service.title} className="text-center">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto">
-                    <service.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg mt-4">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
-                </CardHeader>
-              </Card>
+              <motion.div key={service.title} variants={itemVariants}>
+                <Card className="text-center h-full hover:shadow-md transition-all duration-300">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center mx-auto">
+                      <service.icon className="h-6 w-6 text-brand-primary" />
+                    </div>
+                    <CardTitle className="text-lg mt-4">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription>{service.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              </motion.div>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/quote">
-              <Button size="lg">Get a Custom Quote</Button>
-            </Link>
-          </div>
+          </motion.div>
         </Section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-brand-primary">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center max-w-2xl mx-auto"
+            >
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Start Your Project?
+              </h2>
+              
+              <p className="text-lg text-white/90 mb-8">
+                Get a detailed quote within 24 hours. No commitment required.
+              </p>
+              
+              <Link href="/quote">
+                <Button
+                  size="lg"
+                  className="bg-white hover:bg-white/90 text-brand-primary font-semibold text-lg px-8 h-14 group"
+                >
+                  Request Your Free Quote
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

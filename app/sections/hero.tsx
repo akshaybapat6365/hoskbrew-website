@@ -1,58 +1,65 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Shield, Truck } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden min-h-[85vh] flex items-center bg-gradient-to-br from-background via-secondary/30 to-background">
-      <div className="absolute inset-0 bg-grid opacity-30" />
+    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-primary/10 via-background to-background" />
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2344CF6C' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      }} />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center lg:text-left"
           >
+            {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6 border border-primary/20"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold mb-8 border border-brand-primary/20"
             >
               <Sparkles className="h-4 w-4" />
               <span>Now Accepting Orders</span>
             </motion.div>
 
+            {/* Headline - Brand Voice */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground"
+              className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6 text-foreground"
             >
-              Turn Your Game Into a{" "}
-              <span className="text-primary">Real Cartridge</span>
+              Turn Your Indie Game Into a{" "}
+              <span className="text-brand-primary">Tangible Reality</span>
             </motion.h1>
 
+            {/* Subheadline - From Content Strategy */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Professional white-label manufacturing for indie developers.
-              Physical releases for NES, SNES, Game Boy, Genesis and more.
-              <span className="text-primary font-semibold">
-                {" "}
-                MOQ just 100 units.
+              Professional white-label manufacturing for indie developers. 
+              Homebrews for real hardware—NES, SNES, Game Boy, Genesis and more.
+              <span className="text-brand-primary font-semibold">
+                {" "}Starting at just 100 units.
               </span>
             </motion.p>
 
+            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -62,9 +69,9 @@ export function HeroSection() {
               <Link href="/quote">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8"
+                  className="bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold text-lg px-8 h-14 shadow-lg shadow-brand-primary/25 hover:shadow-xl hover:shadow-brand-primary/30 transition-all"
                 >
-                  Get Free Quote
+                  Get Your Free Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -72,13 +79,14 @@ export function HeroSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="font-semibold text-lg px-8"
+                  className="font-semibold text-lg px-8 h-14 border-2"
                 >
-                  Our Services
+                  Explore Services
                 </Button>
               </Link>
             </motion.div>
 
+            {/* Trust Indicators */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,48 +94,118 @@ export function HeroSection() {
               className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mt-10"
             >
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Shield className="h-4 w-4 text-primary" />
+                <div className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center">
+                  <Shield className="h-4 w-4 text-brand-primary" />
+                </div>
                 <span className="font-medium">100 Unit MOQ</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Truck className="h-4 w-4 text-primary" />
+                <div className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center">
+                  <Truck className="h-4 w-4 text-brand-primary" />
+                </div>
                 <span className="font-medium">Worldwide Shipping</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Sparkles className="h-4 w-4 text-primary" />
+                <div className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center">
+                  <Sparkles className="h-4 w-4 text-brand-primary" />
+                </div>
                 <span className="font-medium">Premium Quality</span>
               </div>
             </motion.div>
           </motion.div>
 
+          {/* Right Content - Visual */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.95, x: 40 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="relative hidden lg:flex items-center justify-center"
           >
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full max-w-xl">
+              {/* Floating Animation Container */}
               <motion.div
-                animate={{ y: [0, -10, 0] }}
+                animate={{ y: [0, -15, 0] }}
                 transition={{
-                  duration: 4,
+                  duration: 5,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
+                className="relative"
               >
-                <Image
-                  src="/logo.svg"
-                  alt="Hoskbrew Logo"
-                  width={500}
-                  height={400}
-                  className="w-full h-auto"
-                  priority
-                />
+                {/* Decorative Ring */}
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 rounded-full blur-3xl scale-110" />
+                
+                {/* Main Visual - Cartridge Stack */}
+                <div className="relative bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 shadow-2xl border border-border">
+                  <div className="space-y-4">
+                    {/* Top Cartridge - NES */}
+                    <motion.div 
+                      whileHover={{ scale: 1.02, rotate: -1 }}
+                      className="bg-gradient-to-r from-gray-200 to-gray-300 rounded-lg p-4 shadow-lg border-b-4 border-gray-400"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-16 h-16 bg-gray-700 rounded flex items-center justify-center">
+                          <span className="text-white font-bold text-xs">NES</span>
+                        </div>
+                        <div className="flex-1">
+                          <div className="h-3 bg-gray-400 rounded w-3/4 mb-2" />
+                          <div className="h-2 bg-gray-300 rounded w-1/2" />
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    {/* Middle Cartridge - SNES */}
+                    <motion.div 
+                      whileHover={{ scale: 1.02, rotate: 1 }}
+                      className="bg-gradient-to-r from-purple-100 to-purple-200 rounded-lg p-4 shadow-lg border-b-4 border-purple-300 ml-4"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-16 h-16 bg-purple-600 rounded flex items-center justify-center">
+                          <span className="text-white font-bold text-xs">SNES</span>
+                        </div>
+                        <div className="flex-1">
+                          <div className="h-3 bg-purple-400 rounded w-3/4 mb-2" />
+                          <div className="h-2 bg-purple-300 rounded w-1/2" />
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    {/* Bottom Cartridge - Game Boy */}
+                    <motion.div 
+                      whileHover={{ scale: 1.02, rotate: -1 }}
+                      className="bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg p-4 shadow-lg border-b-4 border-gray-300 ml-8"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-16 bg-gray-600 rounded flex items-center justify-center">
+                          <span className="text-white font-bold text-xs">GB</span>
+                        </div>
+                        <div className="flex-1">
+                          <div className="h-3 bg-green-400 rounded w-3/4 mb-2" />
+                          <div className="h-2 bg-green-300 rounded w-1/2" />
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+
+                  {/* Stats Badge */}
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 1, duration: 0.5 }}
+                    className="absolute -bottom-4 -right-4 bg-brand-primary text-white rounded-xl p-4 shadow-xl"
+                  >
+                    <div className="text-2xl font-bold">500+</div>
+                    <div className="text-sm opacity-90">Games Produced</div>
+                  </motion.div>
+                </div>
               </motion.div>
             </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Bottom Gradient Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 }

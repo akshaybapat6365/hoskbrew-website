@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Moon, Sun, Menu } from "lucide-react";
-import Image from "next/image";
+import { LogoResponsive } from "@/components/logo";
 
 const navItems = [
   { href: "/services", label: "Services" },
@@ -30,17 +30,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex h-24 items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-16 w-48 transition-transform duration-300 group-hover:scale-105">
-              <Image
-                src="/logo.svg"
-                alt="Hoskbrew"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-          </Link>
+          <LogoResponsive />
 
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
@@ -80,15 +70,7 @@ export function Navbar() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col gap-6 mt-8">
-                  <div className="relative h-16 w-40">
-                    <Image
-                      src="/logo.svg"
-                      alt="Hoskbrew"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
+                  <LogoResponsive />
                   <div className="flex flex-col gap-2">
                     {navItems.map((item) => (
                       <Link
