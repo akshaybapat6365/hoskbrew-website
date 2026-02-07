@@ -12,7 +12,7 @@ import { LogoResponsive } from "@/components/logo";
 const navItems = [
   { href: "/services", label: "Services" },
   { href: "/platforms", label: "Platforms" },
-  { href: "/process", label: "Process" },
+  { href: "/products/crystal-mines", label: "Crystal Mines" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/faq", label: "FAQ" },
 ];

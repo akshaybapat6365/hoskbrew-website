@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Logo } from "@/components/logo";
@@ -7,21 +8,20 @@ import { Logo } from "@/components/logo";
 const footerLinks = {
   services: [
     { label: "Cartridge Production", href: "/services" },
-    { label: "Packaging & Boxes", href: "/packaging" },
+    { label: "Packaging & Boxes", href: "/services" },
     { label: "Manuals & Inserts", href: "/services" },
     { label: "Label Printing", href: "/services" },
   ],
-  platforms: [
-    { label: "NES & Famicom", href: "/platforms" },
-    { label: "SNES", href: "/platforms" },
-    { label: "Game Boy / Color", href: "/platforms" },
-    { label: "Sega Genesis", href: "/platforms" },
+  products: [
+    { label: "Crystal Mines", href: "/products/crystal-mines" },
+    { label: "HoskBrew Services", href: "/products/hoskbrew" },
+    { label: "All Productions", href: "/portfolio" },
   ],
   company: [
     { label: "About Us", href: "/about" },
     { label: "Our Process", href: "/process" },
-    { label: "Portfolio", href: "/portfolio" },
     { label: "FAQ", href: "/faq" },
+    { label: "Get a Quote", href: "/quote" },
   ],
 };
 
@@ -44,12 +44,17 @@ export function Footer() {
                 <span>hello@hoskbrew.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
                 <span>Worldwide Shipping</span>
+              </div>
+              <div className="mt-4">
+                <Image
+                  src="/octopus/octopus-color.png"
+                  alt="HoskBrew Octopus"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain opacity-60 hover:opacity-100 transition-opacity"
+                />
               </div>
             </div>
           </div>
@@ -74,10 +79,10 @@ export function Footer() {
 
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">
-              Platforms
+              Products
             </h4>
             <ul className="space-y-2">
-              {footerLinks.platforms.map((link) => (
+              {footerLinks.products.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
