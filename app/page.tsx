@@ -142,18 +142,17 @@ export default function HomePage() {
                           href="/products/crystal-mines"
                           className="group relative overflow-hidden rounded-xl border border-border hover:border-brand-primary/50 transition-all"
                         >
-                          <Image
-                            src="/products/crystal-mines-ad.png"
-                            alt="Crystal Mines - Game Boy"
-                            width={300}
-                            height={400}
-                            className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
-                            <p className="text-white text-sm font-semibold">
-                              Crystal Mines
-                            </p>
-                            <p className="text-white/70 text-xs">Game Boy</p>
+                          <div className="w-full h-full min-h-[220px] bg-[#0a0f1a] p-4 flex flex-col justify-between">
+                            <div className="text-xs uppercase tracking-[0.25em] text-cyan-300">
+                              Crystal Mines I
+                            </div>
+                            <div className="text-sm text-white font-semibold">
+                              Buried Worlds. Explosive Enemies. And the Clock Is
+                              Melting.
+                            </div>
+                            <div className="text-xs text-cyan-300">
+                              Game Boy
+                            </div>
                           </div>
                         </Link>
 
@@ -162,7 +161,7 @@ export default function HomePage() {
                           className="group relative overflow-hidden rounded-xl border border-border hover:border-brand-primary/50 transition-all"
                         >
                           <Image
-                            src="/brand-assets/images/01.png"
+                            src="/brand-assets/01.png"
                             alt="HoskBrew Services"
                             width={300}
                             height={400}

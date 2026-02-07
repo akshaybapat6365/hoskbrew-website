@@ -35,6 +35,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: "https://hoskbrew.com/products/crystal-mines/",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://hoskbrew.com/products/hoskbrew/",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://hoskbrew.com/faq/",
       lastModified: new Date(),
       changeFrequency: "monthly",

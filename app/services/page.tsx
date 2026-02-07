@@ -236,36 +236,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
-
-        <section className="py-20 bg-brand-primary">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center max-w-2xl mx-auto"
-            >
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Start Your Project?
-              </h2>
-
-              <p className="text-lg text-white/90 mb-8">
-                Get a detailed quote within 24 hours. No commitment required.
-              </p>
-
-              <Link href="/quote">
-                <Button
-                  size="lg"
-                  className="bg-white hover:bg-white/90 text-brand-primary font-semibold text-lg px-8 h-14 group"
-                >
-                  Request Your Free Quote
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-            </motion.div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>

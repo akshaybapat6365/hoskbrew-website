@@ -1,18 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield } from "lucide-react";
-
-/**
- * Crystal Mines Product Page
- * Rebuilt to exactly match overview.pdf design comp
- * Source: brand-assets/pdfs/overview.txt
- */
 
 const gameFeatures = [
   {
@@ -46,14 +39,10 @@ export default function CrystalMinesPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        {}
         <section className="relative overflow-hidden min-h-[80vh] flex items-center bg-[#0a0f1a]">
-          {}
           <div className="absolute inset-0">
-            {}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a] via-[#11192c] to-[#0d1117]" />
 
-            {}
             {[...Array(20)].map((_, i) => (
               <motion.div
                 key={i}
@@ -74,7 +63,6 @@ export default function CrystalMinesPage() {
               />
             ))}
 
-            {}
             <motion.div
               className="absolute top-20 right-10 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-purple-500/5 rotate-45"
               animate={{ rotate: [45, 50, 45] }}
@@ -89,7 +77,6 @@ export default function CrystalMinesPage() {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -186,7 +173,6 @@ export default function CrystalMinesPage() {
                 </motion.div>
               </motion.div>
 
-              {}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -202,27 +188,41 @@ export default function CrystalMinesPage() {
                   }}
                   className="relative"
                 >
-                  {}
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/30 to-emerald-500/20 rounded-2xl blur-3xl scale-110" />
-
-                  {}
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-cyan-500/20 border border-cyan-500/20">
-                    <Image
-                      src="/products/crystal-mines-ad.png"
-                      alt="Crystal Mines - Game Boy Homebrew Game"
-                      width={600}
-                      height={800}
-                      className="w-full max-w-[280px] sm:max-w-md object-contain"
-                      priority
-                    />
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-cyan-500/20 border border-cyan-500/20 bg-[#0f1626]">
+                    <div className="p-6 sm:p-8 space-y-5 max-w-md">
+                      <div className="text-xs tracking-[0.3em] uppercase text-cyan-300">
+                        Crystal Mines I
+                      </div>
+                      <div className="text-lg font-semibold text-white">
+                        Buried Worlds. Explosive Enemies. And the Clock Is
+                        Melting.
+                      </div>
+                      <div className="text-sm text-slate-300">
+                        Take control of high-tech mining robots in a race
+                        against time and cosmic collapse. The cult classic
+                        Crystal Mines returns—and joining it, an all-new sequel:
+                      </div>
+                      <div className="text-base font-semibold text-emerald-300">
+                        Crystal Mines: Supernova
+                      </div>
+                      <div className="text-sm text-slate-300">
+                        Blast, dig, and strategize your way through explosive
+                        chain reactions
+                      </div>
+                      <div className="text-xs text-cyan-300 tracking-widest">
+                        &gt;&gt; SYSTEM ALERT: CORE DISTABILIZATION IMMINENT
+                      </div>
+                      <div className="text-sm text-slate-200">
+                        Can you dig your way out before the stars go dark?
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               </motion.div>
             </div>
           </div>
         </section>
-
-        {}
         <section className="py-20 lg:py-28 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -261,7 +261,6 @@ export default function CrystalMinesPage() {
           </div>
         </section>
 
-        {}
         <section className="py-20 bg-secondary/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -297,7 +296,6 @@ export default function CrystalMinesPage() {
           </div>
         </section>
 
-        {}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">

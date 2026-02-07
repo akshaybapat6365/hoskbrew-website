@@ -3,9 +3,6 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 const platforms = [
   {
@@ -327,37 +324,6 @@ export default function PlatformsPage() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="py-20 bg-[#11192c]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center max-w-2xl mx-auto"
-            >
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
-                Do not See Your Platform?
-              </h2>
-
-              <p className="text-lg text-slate-400 mb-8">
-                We can support additional systems and custom formats. Contact us
-                to discuss your specific requirements—we love a challenge!
-              </p>
-
-              <Link href="/quote">
-                <Button
-                  size="lg"
-                  className="bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold text-lg px-8 h-14 group"
-                >
-                  Contact Us
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-            </motion.div>
           </div>
         </section>
       </main>
